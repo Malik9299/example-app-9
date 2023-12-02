@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 use Orion\Facades\Orion;
 
 /*
@@ -29,3 +30,9 @@ Route::group(['as' => 'api.'], function () {
 Route::get('/test', function () {
     return "Everything working fine ffffffffggggg";
 });
+
+Route::get('/data', [DataController::class, 'index']);
+Route::get('/data/{id}', [DataController::class, 'show']);
+Route::post('/data', [DataController::class, 'store']);
+Route::put('/data/{id}', [DataController::class, 'update']);
+Route::delete('/data/{id}', [DataController::class, 'destroy']);
