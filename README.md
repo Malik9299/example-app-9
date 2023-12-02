@@ -24,3 +24,7 @@ php artisan db:seed --class=DataSeeder
 ## Pagination
 
 Database: Pagination (https://laravel.com/docs/9.x/pagination)
+
+## Tailwind css
+
+Install tailwindcss (https://tailwindcss.com/docs/guides/laravel)

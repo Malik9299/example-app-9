@@ -12,10 +12,16 @@ class DataController extends Controller
     {
         // $data = Data::all();
         // return response()->json($data);
-        return Data::paginate(5);
+        // return Data::paginate(5);
         // return DB::table('data')->paginate(5);
         // return DB::table('data')->simplePaginate(5);
 
+        // return view('data', [
+        //     'data' => DB::table('data')->paginate(5)
+        // ]);
+        $data = Data::paginate(10); // 10 items per page
+
+        return view('data', ['data' => $data]);
     }
 
     public function show($id)
