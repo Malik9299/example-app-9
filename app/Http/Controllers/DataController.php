@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Data;
 use Illuminate\Support\Facades\DB;
+use App\Services\MyService;
 
 class DataController extends Controller
 {
@@ -21,7 +22,15 @@ class DataController extends Controller
         // ]);
         $data = Data::paginate(10); // 10 items per page
 
+        //return view('data', ['data' => $data]);
         return view('data', ['data' => $data]);
+    }
+
+
+    public function showServices(MyService $myService)
+    {
+        $result = $myService->doSomething();
+        return view('showServices', ['result' => $result]);
     }
 
     public function show($id)

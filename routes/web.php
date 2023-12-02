@@ -18,3 +18,4 @@ Route::get('/', function () {
     return view('data');
 });
 Route::get('/data', [DataController::class, 'index']);
+Route::get('/show-services', [DataController::class, 'showServices']);
