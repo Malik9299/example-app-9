@@ -14,3 +14,13 @@ The simplest way to create REST API with Laravel [Orion Docs](https://tailflow.g
 ## Service Providers
 
 Laravel Service Providers [Service Providers](https://laravel.com/docs/9.x/providers).
+
+## Seeder
+
+Create & Run Seeder (https://laravel.com/docs/9.x/seeding#writing-seeders)
+php artisan make:seeder DataSeeder
+php artisan db:seed --class=DataSeeder
+
+## Pagination
+
+Database: Pagination (https://laravel.com/docs/9.x/pagination)

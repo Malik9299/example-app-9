@@ -10,8 +10,12 @@ class DataController extends Controller
 {
     public function index()
     {
-        $data = Data::all();
-        return response()->json($data);
+        // $data = Data::all();
+        // return response()->json($data);
+        return Data::paginate(5);
+        // return DB::table('data')->paginate(5);
+        // return DB::table('data')->simplePaginate(5);
+
     }
 
     public function show($id)
