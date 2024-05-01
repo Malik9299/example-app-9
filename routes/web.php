@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/test', function () {
-    return view('test');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// For static html page no need for get method and a callback inside it
+
+Route::view('/', view: 'index')->name('home');
+Route::view('/about', view: 'about')->name('about');
+Route::view('/contact', view: 'contact')->name('contact');
