@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', view: 'about')->name('about');
 Route::view('/contact', view: 'contact')->name('contact');
+
+Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');

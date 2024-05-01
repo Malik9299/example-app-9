@@ -35,7 +35,7 @@
                                     <div class="small text-muted">{{$post->created_at}}</div>
                                     <h2 class="card-title h4">{{$post->titile}}</h2>
                                     <p class="card-text">{{$post->post_text}}</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
+                                    <a class="btn btn-primary" href="{{route('posts.show',$post->id)}}">Read more →</a>
                                 </div>
                             </div>
                         </div>
