@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('index');
 // });
 // For static html page no need for get method and a callback inside it
 
-Route::view('/', view: 'index')->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', view: 'about')->name('about');
 Route::view('/contact', view: 'contact')->name('contact');
